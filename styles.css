@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    font-family: "BBCReith",Arial,Helvetica,freesans,sans-serif;
+    font-weight: normal;
+    font-weight: 550;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.website {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 700px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adColumn {
+    width: calc((100vw - 700px) / 2);
+}
+
+ul.nav-links {
+    padding: 0.5rem 0 0;
+}
+
+ul .link {
+    padding: 0.5rem;
+}
+
+/* HAMBURGER BUTTON */
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle:focus {
+    background: white;
+}
+
+.mobile-menu-toggle .ham {
+    transition: transform .4s cubic-bezier(.25, .5, .25, 1.5);
+    vertical-align: bottom;
+}
+
+.ham-line {
+	fill: none;
+	transition: transform 400ms ease, stroke-dasharray 400ms ease, stroke-dashoffset 400ms ease;
+	stroke: black;
+	stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+.ham .top {
+    stroke-dasharray: 40 121;
+}
+
+.ham .bottom {
+    stroke-dasharray: 40 121
+}
+
+.mobile-menu-toggle.active .ham .top {
+    stroke-dashoffset: -68px;
+}
+
+.mobile-menu-toggle.active .ham .bottom {
+	stroke-dashoffset: -68px;
+}
+
+.mobile-menu-toggle.active .ham {
+	transform: rotate(-45deg);
+}
+
+header {
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.nav-links {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin: 0 0.75rem;
+}
+
+footer {
+    padding: 1.5rem;
+    color: #444;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.centered-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon-container {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #444;;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.link {
+    background: transparent;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.link:hover {
+    background: linear-gradient(to left, #0e40ac, #700e97, #a50b90);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.timeline {
+    max-width: 650px;
+    width: calc(100% - 1rem);
+    padding: 10vh 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s height;
+}
+
+.timeline__section {
+    overflow:hidden;
+    transition: 1s flex cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.timeline__skillImage {
+    width: 19%;
+}
+
+.timeline__section.hidden {
+    flex: 0;
+}
+
+.timeline__section.visible {
+    flex: 1;
+}
+
+.contact-form__input {
+    font-family: "BBCReith",Arial,Helvetica,freesans,sans-serif;
+    display: block;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    border: 1px solid #cbcbcb;
+}
+
+.contact-form__submit {
+    background: linear-gradient(to left, #0e40ac, #700e97, #a50b90);
+    color: #fff;
+    border: none;
+    box-shadow: 4px 4px 10px 0px #00000040;
+    font-size: 1.5rem;
+}
+
+.timeline__title {
+    font-size: 3rem;
+    margin: 0 0 1rem;
+    letter-spacing: -0.08rem;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    text-align: left;
+    padding: 0;
+    font-weight: 550;
+    font-family: "BBCReith";
+}
+
+.timeline__paragraph {
+    font-weight: 300;
+}
+
+:focus {
+    box-shadow: 1px 1px 5px 0 #a50b90;
+    outline: 2px solid #0e40ac;
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width: 640px) {
+
+    .main-nav {
+        height: 0;
+        transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        opacity: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .active + .main-nav {
+        visibility: visible;
+        opacity: 1;
+        height: 3rem;
+    }
+
+    header {
+        padding: 0 0.5rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+
+    .mobile-menu-toggle {
+        display: initial;
+    }
+}
+
+
+/* ANIMATIONS */
+
+.bigEnterBottom {
+    animation: bigEnterBottom 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.smallEnterLeft {
+    animation: smallEnterLeft 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.bigEnterLeft {
+    animation: bigEnterLeft 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.smallEnterBottom {
+    animation: smallEnterBottom 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes smallEnterLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-1vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }    
+}
+
+
+@keyframes bigEnterLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-2vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes smallEnterBottom {
+    from {
+        opacity: 0;
+        transform: translateY(1vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }    
+}
+
+@keyframes bigEnterBottom {
+    from {
+        opacity: 0;
+        transform: translateY(2vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+    width: 100%;
+    box-shadow: 4px 4px 10px 0px #00000040;
+}
+
+
+
+table td,
+table th {
+    border-left: 1px solid #cbcbcb;
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: 0.75rem 1.5rem;
+}
+
+table thead {
+    background: linear-gradient(to left, #0e40ac, #700e97, #a50b90);
+    color: #fff;
+    text-align: left;
+    vertical-align: bottom;
+}
