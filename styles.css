@@ -101,7 +101,7 @@ header h1 {
 }
 
 footer {
-    padding: 1.5rem;
+    padding-bottom: 0.75rem;
     color: #444;
     font-size: 0.8rem;
     display: flex;
@@ -153,7 +153,7 @@ footer p {
 }
 
 .timeline__section {
-    overflow:hidden;
+    overflow-y: hidden;
     transition: 1s flex cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -184,7 +184,7 @@ footer p {
     background: linear-gradient(to left, #0e40ac, #700e97, #a50b90);
     color: #fff;
     border: none;
-    box-shadow: 4px 4px 10px 0px #00000040;
+    box-shadow: 0px 4px 10px 0px #00000040;
     font-size: 1.5rem;
 }
 
@@ -312,10 +312,8 @@ table {
     empty-cells: show;
     border: 1px solid #cbcbcb;
     width: 100%;
-    box-shadow: 4px 4px 10px 0px #00000040;
+    box-shadow: 0px 4px 10px 0px #00000040;
 }
-
-
 
 table td,
 table th {
