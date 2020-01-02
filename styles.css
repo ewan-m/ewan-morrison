@@ -5,21 +5,11 @@ body {
     font-weight: 550;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
-}
-
-.website {
-    display: flex;
     flex-direction: column;
-    height: 100%;
-    max-width: 700px;
     justify-content: space-between;
     align-items: center;
 }
 
-.adColumn {
-    width: calc((100vw - 700px) / 2);
-}
 
 ul.nav-links {
     padding: 0.5rem 0 0;
@@ -137,7 +127,7 @@ footer p {
 }
 
 .link:hover {
-    background: linear-gradient(to left, #0e40ac, #700e97, #a50b90);
+    background: linear-gradient(to left, #3a72b1, #700e97, #b13ab1);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -181,7 +171,7 @@ footer p {
 }
 
 .contact-form__submit {
-    background: linear-gradient(to left, #0e40ac, #700e97, #a50b90);
+    background: linear-gradient(to left, #3a72b1, #700e97, #b13ab1);
     color: #fff;
     border: none;
     box-shadow: 0px 4px 10px 0px #00000040;
@@ -207,8 +197,8 @@ footer p {
 }
 
 :focus {
-    box-shadow: 1px 1px 5px 0 #a50b90;
-    outline: 2px solid #0e40ac;
+    box-shadow: 1px 1px 5px 0 #b13ab1;
+    outline: 2px solid #3a72b1;
 }
 
 /* MOBILE OPTIMIZATION */
@@ -326,7 +316,7 @@ table th {
 }
 
 table thead {
-    background: linear-gradient(to left, #0e40ac, #700e97, #a50b90);
+    background: linear-gradient(to left, #3a72b1, #700e97, #b13ab1);
     color: #fff;
     text-align: left;
     vertical-align: bottom;
