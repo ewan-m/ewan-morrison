@@ -48,153 +48,164 @@
 		</nav>
 	</header>
 
-	<main class="timeline" style="height: 300px" id="timeline-container">
+	<main class="main-content">
+		<figure class="sexy-side-picture-container">
+		<img src="assets/beach.jpeg" class="sexy-side-picture" alt="me reading on a beach" />
+		<figcaption>
+			Figure 1: On a beach
+		</figcaption>
+		</figure>
+
+		<div class="timeline" style="height: 300px" id="timeline-container">
+			<button onclick="handleClick(this, 'skills')" role="button" aria-expanded="false" aria-controls="experience"
+				class="timeline__title link" tabindex="0">
+				Skills.
+			</button>
+			<section id="skills" class="timeline__section hidden">
+				<img loading="lazy" alt="javascript" class="timeline__skillImage" src="assets/skills/javascript.svg" />
+				<img loading="lazy" alt="csharp" class="timeline__skillImage" src="assets/skills/cshap.svg" />
+				<img loading="lazy" alt="react" class="timeline__skillImage" src="assets/skills/react.svg" />
+				<img loading="lazy" alt="node" class="timeline__skillImage" src="assets/skills/nodejs.svg" />
+				<img loading="lazy" alt="angular" class="timeline__skillImage" src="assets/skills/angular.svg" />
+				<img loading="lazy" alt="html" class="timeline__skillImage" src="assets/skills/html.svg" />
+				<img loading="lazy" alt="css" class="timeline__skillImage" src="assets/skills/css.svg" />
+				<img loading="lazy" alt="azure" class="timeline__skillImage" src="assets/skills/azure.svg" />
+				<img loading="lazy" alt="aws" class="timeline__skillImage" src="assets/skills/aws.svg" />
+				<img loading="lazy" alt="mysql" class="timeline__skillImage" src="assets/skills/mysql.svg" />
+				<img loading="lazy" alt="git" class="timeline__skillImage" src="assets/skills/git.svg" />
+				<img loading="lazy" alt="github" class="timeline__skillImage" src="assets/skills/github.svg" />
+				<img loading="lazy" alt="cypress" class="timeline__skillImage" src="assets/skills/cypress.svg" />
+				<img loading="lazy" alt="jest" class="timeline__skillImage" src="assets/skills/jest.svg" />
+				<img loading="lazy" alt="docker" class="timeline__skillImage" src="assets/skills/docker.png" />
+				<img loading="lazy" alt="karma" class="timeline__skillImage" src="assets/skills/karma.svg" />
+				<img loading="lazy" alt="elasticsearch" class="timeline__skillImage"
+					src="assets/skills/elasticsearch.svg" />
+				<img loading="lazy" alt="typescript" class="timeline__skillImage" src="assets/skills/typescript.svg" />
+			</section>
 
 
-		<button onclick="handleClick(this, 'skills')" role="button" aria-expanded="false" aria-controls="experience"
-			class="timeline__title link" tabindex="0">
-			Skills
-		</button>
-		<section id="skills" class="timeline__section hidden">
-			<img loading="lazy" alt="javascript" class="timeline__skillImage" src="assets/skills/javascript.svg" />
-			<img loading="lazy" alt="csharp" class="timeline__skillImage" src="assets/skills/cshap.svg" />
-			<img loading="lazy" alt="react" class="timeline__skillImage" src="assets/skills/react.svg" />
-			<img loading="lazy" alt="node" class="timeline__skillImage" src="assets/skills/nodejs.svg" />
-			<img loading="lazy" alt="angular" class="timeline__skillImage" src="assets/skills/angular.svg" />
-			<img loading="lazy" alt="html" class="timeline__skillImage" src="assets/skills/html.svg" />
-			<img loading="lazy" alt="css" class="timeline__skillImage" src="assets/skills/css.svg" />
-			<img loading="lazy" alt="azure" class="timeline__skillImage" src="assets/skills/azure.svg" />
-			<img loading="lazy" alt="aws" class="timeline__skillImage" src="assets/skills/aws.svg" />
-			<img loading="lazy" alt="mysql" class="timeline__skillImage" src="assets/skills/mysql.svg" />
-			<img loading="lazy" alt="git" class="timeline__skillImage" src="assets/skills/git.svg" />
-			<img loading="lazy" alt="github" class="timeline__skillImage" src="assets/skills/github.svg" />
-			<img loading="lazy" alt="cypress" class="timeline__skillImage" src="assets/skills/cypress.svg" />
-			<img loading="lazy" alt="jest" class="timeline__skillImage" src="assets/skills/jest.svg" />
-			<img loading="lazy" alt="docker" class="timeline__skillImage" src="assets/skills/docker.png" />
-			<img loading="lazy" alt="karma" class="timeline__skillImage" src="assets/skills/karma.svg" />
-			<img loading="lazy" alt="elasticsearch" class="timeline__skillImage"
-				src="assets/skills/elasticsearch.svg" />
-			<img loading="lazy" alt="typescript" class="timeline__skillImage" src="assets/skills/typescript.svg" />
-		</section>
+			<button onclick="handleClick(this, 'experience')" role="button" aria-expanded="false"
+				aria-controls="experience" class="timeline__title link" tabindex="0">
+				Experience.
+			</button>
+			<section id="experience" class="timeline__section hidden">
+				<h3>
+					Software Engineer<span style="font-weight: 400">
+						| Spark Energy</span>
+				</h3>
+
+				<h3>
+					Software Engineer<span style="font-weight: 400">
+						| Craneware</span>
+				</h3>
+				<p class="timeline__paragraph">
+					This role exposed me to a wide range of technologies and gave me a great opportunity to hone my
+					skills. I worked on many high impact projects, ranging from implementing a new authentication
+					system for the entire product suite, feature delivery, addressing critical security issues to
+					rewriting
+					and enhancing legacy front end code into performant Angular modules.
+				</p>
+				<p class="timeline__paragraph">
+					I performed extensive code reviews and I always tried to include links to blogs or documentation
+					along
+					with any suggestions. Although this was more time consuming, it was very satisfying to see its
+					impact on
+					subsequent pull requests. I led a team of interns to rewrite legacy front end code into Angular 6,
+					and
+					liaised with UX and product management to simultaneously deliver enhancements. This was a great
+					opportunity to mentor and nurture the interns' skills.
+				</p>
+				<p class="timeline__paragraph">
+					When developing new features I followed the TDD approach of starting with unit tests. This provides
+					me
+					with a solid foundation from which I can write clean, efficient and expressive code which I can
+					safely
+					refactor for improved readability and structure. I enjoy using many features of a range of
+					programming
+					paradigms and I understand the benefits of different approaches. I have read books about OOP
+					design patterns and taken courses in functional programming, each having a profound impact in how I
+					write code.
+				</p>
+			</section>
 
 
-		<button onclick="handleClick(this, 'experience')" role="button" aria-expanded="false" aria-controls="experience"
-			class="timeline__title link" tabindex="0">
-			Experience.
-		</button>
-		<section id="experience" class="timeline__section hidden">
-			<h3>
-				Software Engineer<span style="font-weight: 400">
-					| Spark Energy</span>
-			</h3>
-
-			<h3>
-				Software Engineer<span style="font-weight: 400">
-					| Craneware</span>
-			</h3>
-			<p class="timeline__paragraph">
-				This role exposed me to a wide range of technologies and gave me a great opportunity to hone my
-				skills. I worked on many high impact projects, ranging from implementing a new authentication
-				system for the entire product suite, feature delivery, addressing critical security issues to
-				rewriting
-				and enhancing legacy front end code into performant Angular modules.
-			</p>
-			<p class="timeline__paragraph">
-				I performed extensive code reviews and I always tried to include links to blogs or documentation
-				along
-				with any suggestions. Although this was more time consuming, it was very satisfying to see its
-				impact on
-				subsequent pull requests. I led a team of interns to rewrite legacy front end code into Angular 6,
-				and
-				liaised with UX and product management to simultaneously deliver enhancements. This was a great
-				opportunity to mentor and nurture the interns' skills.
-			</p>
-			<p class="timeline__paragraph">
-				When developing new features I followed the TDD approach of starting with unit tests. This provides me
-				with a solid foundation from which I can write clean, efficient and expressive code which I can safely
-				refactor for improved readability and structure. I enjoy using many features of a range of programming
-				paradigms and I understand the benefits of different approaches. I have read books about OOP
-				design patterns and taken courses in functional programming, each having a profound impact in how I
-				write code.
-			</p>
-		</section>
-
-
-		<button onclick="handleClick(this, 'education')" role="button" aria-expanded="false" aria-controls="education"
-			class="timeline__title link" tabindex="0">
-			Education.
-		</button>
-		<section id="education" class="timeline__section hidden">
-			<h3>
-				Physics Bsc Hons<span style="font-weight: 400">
-					| The University of Edinburgh</span>
-			</h3>
-			<p class="timeline__paragraph">
-				My time at university gave me a very solid grounding in
-				mathematics and logical thinking. It also taught me how to
-				approach problems in intelligent and novel ways. I focused on
-				programming based classes and tackled challenges such as efficiently
-				simulating complex systems (including a quantum processor),
-				creating machine learning based prediction models, and
-				statistical data analysis.
-			</p>
-			<h3>
-				Secondary School<span style="font-weight: 400">
-					| St Johns RC Academy</span>
-			</h3>
-			<p class="timeline__paragraph">
-				My achievements at school also include being awarded the best grades
-				in my year and winning the school Dux medal.
-			</p>
-			<table>
-				<thead>
-					<th>Subject</th>
-					<th>Level</th>
-					<th>Grade</th>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Physics</td>
-						<td>Adv. Higher</td>
-						<td>A</td>
-					</tr>
-					<tr>
-						<td>Spanish</td>
-						<td>Adv. Higher</td>
-						<td>A</td>
-					</tr>
-					<tr>
-						<td>Maths</td>
-						<td>Adv. Higher</td>
-						<td>A</td>
-					</tr>
-					<tr>
-						<td>Chemistry</td>
-						<td>Higher</td>
-						<td>A</td>
-					</tr>
-					<tr>
-						<td>English</td>
-						<td>Higher</td>
-						<td>B</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
+			<button onclick="handleClick(this, 'education')" role="button" aria-expanded="false"
+				aria-controls="education" class="timeline__title link" tabindex="0">
+				Education.
+			</button>
+			<section id="education" class="timeline__section hidden">
+				<h3>
+					Physics Bsc Hons<span style="font-weight: 400">
+						| The University of Edinburgh</span>
+				</h3>
+				<p class="timeline__paragraph">
+					My time at university gave me a very solid grounding in
+					mathematics and logical thinking. It also taught me how to
+					approach problems in intelligent and novel ways. I focused on
+					programming based classes and tackled challenges such as efficiently
+					simulating complex systems (including a quantum processor),
+					creating machine learning based prediction models, and
+					statistical data analysis.
+				</p>
+				<h3>
+					Secondary School<span style="font-weight: 400">
+						| St Johns RC Academy</span>
+				</h3>
+				<p class="timeline__paragraph">
+					My achievements at school also include being awarded the best grades
+					in my year and winning the school Dux medal.
+				</p>
+				<table>
+					<thead>
+						<th>Subject</th>
+						<th>Level</th>
+						<th>Grade</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Physics</td>
+							<td>Adv. Higher</td>
+							<td>A</td>
+						</tr>
+						<tr>
+							<td>Spanish</td>
+							<td>Adv. Higher</td>
+							<td>A</td>
+						</tr>
+						<tr>
+							<td>Maths</td>
+							<td>Adv. Higher</td>
+							<td>A</td>
+						</tr>
+						<tr>
+							<td>Chemistry</td>
+							<td>Higher</td>
+							<td>A</td>
+						</tr>
+						<tr>
+							<td>English</td>
+							<td>Higher</td>
+							<td>B</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
 
 
-		<button class="timeline__title link" onclick="handleClick(this, 'contact')" role="button" aria-expanded="false"
-			aria-controls="contact" tabindex="0">
-			Contact.
-		</button>
-		<section id="contact" class="timeline__section hidden">
-			<form>
-				<input class="contact-form__input" type="text" placeholder="Name" />
-				<input class="contact-form__input" type="text" placeholder="Email" />
-				<textarea class="contact-form__input" placeholder="Message"></textarea>
-			</form>
-			<button class="contact-form__input contact-form__submit">Send</button>
-		</section>
+			<button class="timeline__title link" onclick="handleClick(this, 'contact')" role="button"
+				aria-expanded="false" aria-controls="contact" tabindex="0">
+				Contact.
+			</button>
+			<section id="contact" class="timeline__section hidden">
+				<form>
+					<input class="contact-form__input" type="text" placeholder="Name" />
+					<input class="contact-form__input" type="text" placeholder="Email" />
+					<textarea class="contact-form__input" placeholder="Message"></textarea>
+				</form>
+				<button class="contact-form__input contact-form__submit">Send</button>
+			</section>
+		</div>
+
 	</main>
 
 	<footer>
