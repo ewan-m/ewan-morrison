@@ -147,8 +147,22 @@ footer p {
     transition: 1s flex cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.timeline__skillsCarousel {
+    display: flex;
+    flex-direction: row;
+}
+
+.timeline__skillFigure {
+    display: inline-flex;
+    margin: 0;
+    padding: 0 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
 .timeline__skillImage {
-    width: 19%;
+    width: 150px;
+    height: 150px;
 }
 
 .timeline__section.hidden {
@@ -164,7 +178,7 @@ footer p {
     display: block;
     padding: 0.75rem;
     margin: 1rem 0;
-    width: 100%;
+    min-width: 100%;
     box-sizing: border-box;
     border-radius: 0.25rem;
     border: 1px solid #cbcbcb;
@@ -176,6 +190,7 @@ footer p {
     border: none;
     box-shadow: 0px 4px 10px 0px #00000040;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .timeline__title {
