@@ -140,12 +140,12 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s height;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s height;
 }
 
 .timeline__section {
     overflow-y: hidden;
-    transition: 1s flex cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 2s flex cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .timeline__skillsCarousel {
