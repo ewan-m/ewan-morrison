@@ -8,8 +8,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    scrollbar-width: thin;
+    scrollbar-color: #477683 #fff;
 }
-
 
 ul.nav-links {
     padding: 0.5rem 0 0;
@@ -127,7 +128,7 @@ footer p {
 }
 
 .link:hover {
-    background: linear-gradient(to left, #3a72b1, #700e97, #b13ab1);
+    background: linear-gradient(to left, #477683, #0c677f, #268779);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -150,6 +151,25 @@ footer p {
 .timeline__skillsCarousel {
     display: flex;
     flex-direction: row;
+    padding-bottom: 0.75rem;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #477683 #fff;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #477683;
+    border-radius: 6px;
+    border: 3px solid #fff;
 }
 
 .timeline__skillFigure {
@@ -180,15 +200,13 @@ footer p {
     margin: 1rem 0;
     min-width: 100%;
     box-sizing: border-box;
-    border-radius: 0.25rem;
     border: 1px solid #cbcbcb;
 }
 
 .contact-form__submit {
-    background: linear-gradient(to left, #3a72b1, #700e97, #b13ab1);
+    background: linear-gradient(to left, #477683, #0c677f, #268779);
     color: #fff;
     border: none;
-    box-shadow: 0px 4px 10px 0px #00000040;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -197,7 +215,6 @@ footer p {
     font-size: 3rem;
     margin: 0 0 1rem;
     letter-spacing: -0.08rem;
-    text-decoration: underline;
     cursor: pointer;
     display: inline-block;
     border: none;
@@ -207,13 +224,23 @@ footer p {
     font-family: "BBCReith";
 }
 
+.timeline__sectionTitle:not(:first-child) {
+    margin-top: 3rem;
+}
+
+.timeline__sectionTitle > span {
+    font-weight: 300;
+    font-size: 2em;
+    display: block;
+}
+
 .timeline__paragraph {
     font-weight: 300;
 }
 
 :focus {
-    box-shadow: 1px 1px 5px 0 #b13ab1;
-    outline: 2px solid #3a72b1;
+    box-shadow: 1px 1px 5px 0 #0c677f;
+    outline: 2px solid #268779;
 }
 
 .main-content {
@@ -224,8 +251,6 @@ footer p {
 
 .sexy-side-picture-container {
     width: calc(50vw - 343px);
-    max-height: 60%;
-	transform: rotate(-4.4deg);
 	z-index: -1;
     padding: 3rem;
 }
@@ -350,12 +375,10 @@ table {
     empty-cells: show;
     border: 1px solid #cbcbcb;
     width: 100%;
-    box-shadow: 0px 4px 10px 0px #00000040;
 }
 
 table td,
 table th {
-    border-left: 1px solid #cbcbcb;
     border-width: 0 0 0 1px;
     font-size: inherit;
     margin: 0;
@@ -364,7 +387,7 @@ table th {
 }
 
 table thead {
-    background: linear-gradient(to left, #3a72b1, #700e97, #b13ab1);
+    background: linear-gradient(to left, #477683, #0c677f, #268779);
     color: #fff;
     text-align: left;
     vertical-align: bottom;

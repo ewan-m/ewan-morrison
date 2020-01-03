@@ -48,9 +48,14 @@
 
 	<main class="main-content">
 		<figure class="sexy-side-picture-container">
-			<img src="assets/beach.jpeg" class="sexy-side-picture" alt="me reading on a beach" />
+			<img src="assets/mountains.jpg" class="sexy-side-picture" alt="me reading on a beach" />
 			<figcaption>
-				Figure 1: On a beach
+				Photo by <a class="link" href="https://unsplash.com/@tothszabolcs?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+					Szabolcs Tóth
+				</a> on
+				<a class="link" href="https://unsplash.com/t/nature?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+					Unsplash
+				</a>
 			</figcaption>
 		</figure>
 
@@ -60,7 +65,7 @@
 				Skills.
 			</button>
 			<section id="skills" class="timeline__section hidden">
-				<marquee behavior="alternate" direction="left" scrollamount="40" class="timeline__skillsCarousel">
+				<div class="timeline__skillsCarousel">
 					<figure class="timeline__skillFigure">
 						<img alt="javascript" class="timeline__skillImage" src="assets/skills/javascript.svg" />
 						<figcaption>Javascript</figcaption>
@@ -137,7 +142,7 @@
 						<img alt="typescript" class="timeline__skillImage" src="assets/skills/typescript.svg" />
 						<figcaption>Typescript</figcaption>
 					</figure>
-				</marquee>
+				</div>
 			</section>
 
 
@@ -146,14 +151,25 @@
 				Experience.
 			</button>
 			<section id="experience" class="timeline__section hidden">
-				<h3>
-					Software Engineer<span style="font-weight: 400">
-						| Spark Energy</span>
+				<h3 class="timeline__sectionTitle">
+					Spark Energy
+					<span>Software Engineer</span>
 				</h3>
 
-				<h3>
-					Software Engineer<span style="font-weight: 400">
-						| Craneware</span>
+				<p class="timeline__paragraph">
+					I am currently working on the digital team responsible for the tools to help customers manage their
+					energy accounts. In this role I have worked on creating a design system with bespoke React UI
+					components and used this to develop intuitive React applications to help empower Spark's customers.
+					I have also architected build and deployment pipelines and integrated end to end testing solutions.
+				</p>
+				<p class="timeline__paragraph">
+					I have learnt and had a large part in native mobile development and maintaining apps used by 30,000+
+					customers in the app stores. I have developed a React Native design system and used it to begin work on
+					creating a slick modern enhancement.
+				</p>
+
+				<h3 class="timeline__sectionTitle">
+					Craneware<span>Software Engineer</span>
 				</h3>
 				<p class="timeline__paragraph">
 					This role exposed me to a wide range of technologies and gave me a great opportunity to hone my
@@ -191,9 +207,8 @@
 				Education.
 			</button>
 			<section id="education" class="timeline__section hidden">
-				<h3>
-					Physics Bsc Hons<span style="font-weight: 400">
-						| The University of Edinburgh</span>
+				<h3 class="timeline__sectionTitle">
+					The University of Edinburgh<span>Physics Bsc Hons</span>
 				</h3>
 				<p class="timeline__paragraph">
 					My time at university gave me a very solid grounding in
@@ -202,11 +217,10 @@
 					programming based classes and tackled challenges such as efficiently
 					simulating complex systems (including a quantum processor),
 					creating machine learning based prediction models, and
-					statistical data analysis.
+					statistical data analysis. I was awarded an upper second class honours degree.
 				</p>
-				<h3>
-					Secondary School<span style="font-weight: 400">
-						| St Johns RC Academy</span>
+				<h3 class="timeline__sectionTitle">
+					Secondary School<span>St Johns RC Academy</span>
 				</h3>
 				<p class="timeline__paragraph">
 					My achievements at school also include being awarded the best grades
