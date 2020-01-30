@@ -48,15 +48,7 @@
 
 	<main class="main-content">
 		<figure class="sexy-side-picture-container">
-			<img src="assets/mountains.jpg" class="sexy-side-picture" alt="me reading on a beach" />
-			<figcaption>
-				Photo by <a class="link" href="https://unsplash.com/@tothszabolcs?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-					Szabolcs Tóth
-				</a> on
-				<a class="link" href="https://unsplash.com/t/nature?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-					Unsplash
-				</a>
-			</figcaption>
+			<img src="assets/me.jpg" class="sexy-side-picture" alt="me at a castle" />
 		</figure>
 
 		<div class="timeline" style="height: 300px" id="timeline-container">
@@ -164,8 +156,8 @@
 				</p>
 				<p class="timeline__paragraph">
 					I have learnt and had a large part in native mobile development and maintaining apps used by 30,000+
-					customers in the app stores. I have developed a React Native design system and used it to begin work on
-					creating a slick modern enhancement.
+					customers in the app stores. I have developed a React Native design system and used it to begin work
+					on creating a slick modern enhancement.
 				</p>
 
 				<h3 class="timeline__sectionTitle">
@@ -320,7 +312,6 @@
 		}
 
 		function handleClick(element, sectionId) {
-
 			element.setAttribute("aria-expanded", element.getAttribute("aria-expanded") === "false" ? "true" : "false");
 			expandSection(sectionId);
 		}
@@ -354,6 +345,10 @@
 			if (className.includes("hidden")) {
 				containerElement.setAttribute("style", "height: ".concat(375 + Math.max(sectionElement.scrollHeight, 150), "px"));
 				sectionElement.setAttribute("class", className.replace("hidden", "visible"));
+
+				setTimeout(function () {
+					sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}, 1000);
 			} else {
 				sectionElement.setAttribute("class", className.replace("visible", "hidden"));
 			}
