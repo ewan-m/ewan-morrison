@@ -56,7 +56,7 @@
 				class="timeline__title link" tabindex="0">
 				Skills.
 			</button>
-			<section id="skills" class="timeline__section hidden">
+			<section id="skills-section" class="timeline__section hidden">
 				<div class="timeline__skillsCarousel">
 					<figure class="timeline__skillFigure">
 						<img alt="javascript" class="timeline__skillImage" src="assets/skills/javascript.svg" />
@@ -142,7 +142,7 @@
 				aria-controls="experience" class="timeline__title link" tabindex="0">
 				Experience.
 			</button>
-			<section id="experience" class="timeline__section hidden">
+			<section id="experience-section" class="timeline__section hidden">
 				<h3 class="timeline__sectionTitle">
 					Spark Energy
 					<span>Software Engineer</span>
@@ -198,7 +198,7 @@
 				aria-controls="education" class="timeline__title link" tabindex="0">
 				Education.
 			</button>
-			<section id="education" class="timeline__section hidden">
+			<section id="education-section" class="timeline__section hidden">
 				<h3 class="timeline__sectionTitle">
 					The University of Edinburgh<span>Physics Bsc Hons</span>
 				</h3>
@@ -259,7 +259,7 @@
 				aria-expanded="false" aria-controls="contact" tabindex="0">
 				Contact.
 			</button>
-			<section id="contact" class="timeline__section hidden">
+			<section id="contact-section" class="timeline__section hidden">
 				<form onsubmit="sendContactEmail(event)">
 					<input oninput="hideErrorMessage()" id="contactName" class="contact-form__input" type="text"
 						name="Name" placeholder="Name" />
@@ -303,6 +303,8 @@
 	</footer>
 
 	<script>
+		var timeout = null;
+
 		function closeAllSections(sectionClassName) {
 			document.querySelectorAll("." + sectionClassName.split(" ")[0]).forEach(function (element) {
 				element.setAttribute("class", sectionClassName.replace("visible", "hidden"));
@@ -312,8 +314,12 @@
 		}
 
 		function handleClick(element, sectionId) {
-			element.setAttribute("aria-expanded", element.getAttribute("aria-expanded") === "false" ? "true" : "false");
-			expandSection(sectionId);
+			if (window.location.hash !== '#'.concat(sectionId)) {
+				element.setAttribute("aria-expanded", "true");
+				window.location.hash = sectionId;
+			} else {
+				window.location.hash = "landing";
+			}
 		}
 
 		function hideErrorMessage() {
@@ -345,9 +351,8 @@
 			if (className.includes("hidden")) {
 				containerElement.setAttribute("style", "height: ".concat(375 + Math.max(sectionElement.scrollHeight, 150), "px"));
 				sectionElement.setAttribute("class", className.replace("hidden", "visible"));
-
-				setTimeout(function () {
-					sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				timeout = setTimeout(function () {
+					sectionElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
 				}, 1000);
 			} else {
 				sectionElement.setAttribute("class", className.replace("visible", "hidden"));
@@ -355,8 +360,10 @@
 		}
 
 		function handleRouting() {
+			window.scrollTo({ behavior: 'smooth', left: 0, top: 0 });
+			clearTimeout(timeout);
 			if (window.location.hash && window.location.hash !== "#landing") {
-				expandSection(window.location.hash.replace("#", ""));
+				expandSection(window.location.hash.replace("#", "").concat("-section"));
 			} else {
 				closeAllSections("timeline__section visible");
 			}
