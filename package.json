@@ -4,12 +4,12 @@
   "description": "Personal website / CV",
   "main": "src/index.html",
   "browserslist": "> 0.25%, not dead",
-  "homepage": "/ewan-morrison/",
+  "homepage": "/",
   "author": "Ewan Morrison",
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html  --out-dir docs --public-url ./",
+    "build": "parcel build src/index.html  --out-dir docs",
     "format": "prettier \"src/**\" --write"
   },
   "dependencies": {

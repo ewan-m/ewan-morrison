@@ -10,7 +10,7 @@ import { Experience } from "./app/pages/Experience";
 import { Skills } from "./app/pages/Skills";
 import "./index.scss";
 
-const history = createBrowserHistory({ basename: "/ewan-morrison" });
+const history = createBrowserHistory();
 
 const ScrollOnRouteChange = () => {
 	const { pathname } = useLocation();
