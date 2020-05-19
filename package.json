@@ -4,7 +4,7 @@
   "description": "Personal website / CV",
   "main": "src/index.html",
   "browserslist": "> 0.25%, not dead",
-  "homepage": "/",
+  "homepage": "https://www.ewanmorrison.co.uk",
   "author": "Ewan Morrison",
   "license": "MIT",
   "scripts": {
