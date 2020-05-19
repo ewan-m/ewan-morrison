@@ -29,6 +29,9 @@
 	}
 
 	.innerWindow {
+		scrollbar-width: thin;
+		scrollbar-color: $secondary $lightGrey;
+
 		&::-webkit-scrollbar {
 			width: 11px;
 		}

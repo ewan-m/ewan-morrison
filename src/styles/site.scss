@@ -1,6 +1,7 @@
 @import "./variables.scss";
 
 .siteHeader {
+	background: $secondary;
 	background-image: $primaryGradient;
 	padding: $size0;
 	position: sticky;

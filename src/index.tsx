@@ -16,7 +16,10 @@ const ScrollOnRouteChange = () => {
 	const { pathname } = useLocation();
 
 	useEffect(() => {
-		document.getElementById("scrollingWindow")?.scrollTo({ top: 0 });
+		const scrollingWindow = document.getElementById("scrollingWindow");
+		if (scrollingWindow) {
+			scrollingWindow.scrollTop = 0;
+		}
 	}, [pathname]);
 
 	return null;
