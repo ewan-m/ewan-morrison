@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./Page.scss";
 import { Icon } from "../global/Icon";
+import CV from "../../assets/CV/EwanMorrisonCV.pdf";
 
 export const Contact = () => {
 	return (
@@ -28,6 +29,14 @@ export const Contact = () => {
 				href="mailto:contact@ewanmorrison.co.uk"
 			>
 				<Icon>mail</Icon>&nbsp;Email
+			</a>
+			<a
+				download
+				className="button button__primary button--large"
+				href={CV}
+				style={{ margin: "0.375rem" }}
+			>
+				<Icon>cloud_download</Icon>&nbsp;Download my CV
 			</a>
 		</div>
 	);
