@@ -12,7 +12,8 @@ export const Explanation = () => (
 			</p>
 			<p>
 				As a bit of fun I've tried to make the desktop site look like a desktop OS
-				and the mobile site look like a physical phone.
+				and the mobile site look like a physical phone. Try moving the windows about
+				and resizing them!
 			</p>
 			<p>Feel free to get in touch with me!</p>
 
@@ -45,6 +46,10 @@ export const Explanation = () => (
 			>
 				<Icon>cloud_download</Icon>&nbsp;Download my CV
 			</a>
+			<p>
+				Full disclaimer: I made this in a few hours and I've only tested in Chrome
+				and Firefox. There may be bugs!
+			</p>
 		</div>
 	</>
 );
