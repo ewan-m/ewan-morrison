@@ -1,7 +1,8 @@
 import * as React from "react";
 import { FunctionComponent } from "react";
 import { NavLink } from "react-router-dom";
-import { Icon } from "./Icon";
+import { Icon } from "../Icon";
+import "./SiteContainer.scss";
 
 export const SiteContainer: FunctionComponent = ({ children }) => (
 	<div className="outerWindow">
