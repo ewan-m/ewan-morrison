@@ -1,0 +1,31 @@
+{
+  "name": "ewan-morrison",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "docs/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "light-server -s docs -o",
+    "format": "prettier \"docs/**\" --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewan-m/ewan-morrison.git"
+  },
+  "keywords": [
+    "personal",
+    "website"
+  ],
+  "author": "Ewan Morrison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ewan-m/ewan-morrison/issues"
+  },
+  "homepage": "https://github.com/ewan-m/ewan-morrison#readme",
+  "dependencies": {
+    "light-server": "^2.8.0",
+    "prettier": "^2.0.5"
+  }
+}

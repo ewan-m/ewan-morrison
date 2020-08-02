@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Ewan Morrison</title>
+		<meta name="description" content="Full stack software engineer." />
+		<meta
+			name="keywords"
+			content="software, engineer, full, stack, front end, accessible, web, ewan, morrison, edinburgh"
+		/>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<link
+			rel="apple-touch-icon-precomposed"
+			href="apple-touch-icon-114x114-precomposed.png"
+		/>
+		<link rel="shortcut icon" href="favicon.png" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+
+	<body id="body" class="theme">
+		<header class="header">
+			<div class="inner-header">
+				<a class="link" href="/">
+					<h1 class="title link">
+						Ewan Morrison
+					</h1>
+				</a>
+				<nav>
+					<a class="link link--top-nav" href="about.html">Experience</a>
+					<a class="link link--top-nav" href="about.html">Contact</a>
+				</nav>
+			</div>
+			<button class="light-switch" onclick="toggleTheme(this)">
+				<span class="a11y">Toggle theme</span>
+			</button>
+		</header>
+		<main>
+			<img src="assets/me.png" class="me-image" alt="me! ewan morrison" />
+			<p>
+				I'm a <strong>full stack software engineer</strong> with a passion for
+				building and designing
+			</p>
+			<ul>
+				<li>responsive, accessible and intuitive front-end experiences</li>
+				<li>scalable and performant back-end services</li>
+			</ul>
+		</main>
+	</body>
+	<script>
+		function toggleTheme(el) {
+			const body = document.getElementById("body");
+			body.style.opacity = 0;
+			el.style["transition-duration"] = "0.25s";
+			el.style.top = "0px";
+			setTimeout(function () {
+				body.style.opacity = 1;
+				body.classList.toggle("dark-theme");
+				el.style.top = null;
+				el.style["transition-duration"] = null;
+			}, 300);
+		}
+	</script>
+</html>
