@@ -1,2 +1,0 @@
-# ewan morrison
-## personal website
